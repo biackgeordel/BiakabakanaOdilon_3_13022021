@@ -1,0 +1,19 @@
+{
+  "name": "biakabakanaodilon_3_13022021",
+  "version": "1.0.0",
+  "description": "projet 3 ",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/main.scss:./scss/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biackgeordel/BiakabakanaOdilon_3_13022021.git"
+  },
+  "author": "Biakabakana odilon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biackgeordel/BiakabakanaOdilon_3_13022021/issues"
+  },
+  "homepage": "https://github.com/biackgeordel/BiakabakanaOdilon_3_13022021#readme"
+}
