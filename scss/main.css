@@ -18,6 +18,7 @@ body, html {
 
 h2, h3 {
   font-family: "roboto", sans-serif;
+  font-size: 5vw;
 }
 
 @media only screen and (max-width: 950px) {
@@ -31,32 +32,36 @@ header {
   width: 100%;
   text-align: center;
   padding-top: 2vw;
-  height: 10vw;
+  height: 15vw;
 }
 header div > img {
-  width: 25vw;
-  height: 5vw;
+  width: 35vw;
+  height: 10vw;
 }
 
 .research {
   width: 100%;
-  height: 7vw;
+  height: 10vw;
   display: flex;
+  border: 1px solid grey;
 }
 .research input {
   width: 58%;
   height: 100%;
   font-size: 3vw;
+  border: none;
 }
 .research span {
   display: inline-block;
   width: 42%;
   height: 100%;
+  font-size: 3vw;
+  padding-top: 3vw;
+  padding-right: 2vw;
   text-align: right;
 }
 
 .section-research {
-  border: 1px solid red;
   width: 100%;
   height: 70vw;
   display: flex;
@@ -83,29 +88,48 @@ header div > img {
   height: 9vw;
 }
 
-img {
-  width: 10vw;
-  height: 10vw;
-}
-
-h2 {
-  font-size: 5vw;
-}
-
 .box-fct {
   width: 100%;
-  height: 70vw;
-  border: 1px solid blue;
+  height: 90vw;
+  font-size: 4.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .box-fct__titre {
-  width: 100%;
+  width: 90%;
   height: 5vw;
 }
 .box-fct div {
   width: 90%;
-  height: 15vw;
-  margin: auto;
+  height: 16vw;
+  border-radius: 5vw;
   border: 1px solid grey;
+  padding-top: 5vw;
+  font-weight: bold;
+  text-align: center;
+}
+.box-fct div .number {
+  display: inline-block;
+  position: relative;
+  right: 16.5vw;
+  background-color: #9356DC;
+  width: 6vw;
+  height: 6vw;
+  text-align: center;
+  color: white;
+  border-radius: 100%;
+}
+.box-fct div .pos {
+  right: 21.5vw;
+}
+.box-fct div .pos1 {
+  right: 17.5vw;
+}
+.box-fct div span > i {
+  position: relative;
+  right: 10vw;
 }
 
 .resto {
@@ -114,21 +138,24 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   font-size: 4vw;
   line-height: 0.5;
   background: #e7e4e4;
   border: 1px solid #e7e4e4;
 }
 .resto__titre {
-  width: 60%;
+  width: 90%;
+  height: 6vw;
+  text-align: left;
 }
 .resto__menu {
   width: 90%;
   background: white;
-  height: 60vw;
+  height: 70vw;
   margin: auto;
   border-radius: 4vw;
-  margin-bottom: 2vw;
+  margin-bottom: 3vw;
 }
 .resto__menu__image {
   width: 100%;
@@ -142,31 +169,30 @@ h2 {
 }
 
 p {
-  padding-left: 0.8vw;
+  padding-left: 2vw;
 }
 p i {
   float: right;
-  font-size: 5vw;
+  font-size: 8vw;
   cursor: pointer;
 }
 p .hide {
   color: black;
   position: relative;
-  right: 5vw;
+  right: 8vw;
   z-index: 1000;
 }
 p .hide:hover {
-  color: #9356DC;
+  color: #c77fb3;
 }
 p .hide:hover + .test {
   opacity: 1;
   transform: scale(1);
 }
 p .hide + .test {
-  color: #9356DC;
+  color: #c77fb3;
   opacity: 1;
-  transform: scale(0.01);
-  transform-origin: bottom;
+  transform: scale(0);
   transition: opacity 200ms 100ms, transform 0.5s cubic-bezier(0.35, 0.04, 0.23, 0.98);
 }
 
