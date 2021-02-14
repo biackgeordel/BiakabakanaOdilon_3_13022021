@@ -1,7 +1,173 @@
+@font-face {
+  font-family: "roboto";
+  src: url(../../public/polices/Roboto-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "shrik";
+  src: url("../../public/polices/Shrikhand-Regular.ttf") format("truetype");
+}
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: "roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2, h3 {
+  font-family: "roboto", sans-serif;
+}
+
+@media only screen and (max-width: 950px) {
+  body {
+    margin: 0;
+  }
+}
+
 header {
+  border: 1px solid grey;
+  width: 100%;
+  text-align: center;
+  padding-top: 2vw;
+  height: 10vw;
+}
+header div > img {
+  width: 25vw;
+  height: 5vw;
+}
+
+.research {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+}
+.research input {
+  width: 58%;
+  height: 100%;
+  font-size: 3vw;
+}
+.research span {
+  display: inline-block;
+  width: 42%;
+  height: 100%;
+  text-align: right;
+}
+
+.section-research {
+  border: 1px solid red;
+  width: 100%;
+  height: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-research .fct {
+  width: 50%;
+  height: 12vw;
+  text-align: center;
+}
+.section-research .description {
+  width: 60%;
+  height: 6vw;
+  text-align: center;
+  font-size: 3vw;
+}
+.section-research .btn {
+  outline: none;
+  border: none;
+  width: 40vw;
+  font-size: 2.5vw;
+  border-radius: 4vw;
+  height: 9vw;
+}
+
+img {
+  width: 10vw;
+  height: 10vw;
+}
+
+h2 {
+  font-size: 5vw;
+}
+
+.box-fct {
+  width: 100%;
+  height: 70vw;
+  border: 1px solid blue;
+}
+.box-fct__titre {
+  width: 100%;
+  height: 5vw;
+}
+.box-fct div {
   width: 90%;
-  border: 1px solid gray;
-  background-color: blue;
+  height: 15vw;
+  margin: auto;
+  border: 1px solid grey;
+}
+
+.resto {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 4vw;
+  line-height: 0.5;
+  background: #e7e4e4;
+  border: 1px solid #e7e4e4;
+}
+.resto__titre {
+  width: 60%;
+}
+.resto__menu {
+  width: 90%;
+  background: white;
+  height: 60vw;
+  margin: auto;
+  border-radius: 4vw;
+  margin-bottom: 2vw;
+}
+.resto__menu__image {
+  width: 100%;
+  height: 70%;
+}
+.resto__menu__image > img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 4vw;
+  border-top-right-radius: 4vw;
+}
+
+p {
+  padding-left: 0.8vw;
+}
+p i {
+  float: right;
+  font-size: 5vw;
+  cursor: pointer;
+}
+p .hide {
+  color: black;
+  position: relative;
+  right: 5vw;
+  z-index: 1000;
+}
+p .hide:hover {
+  color: #9356DC;
+}
+p .hide:hover + .test {
+  opacity: 1;
+  transform: scale(1);
+}
+p .hide + .test {
+  color: #9356DC;
+  opacity: 1;
+  transform: scale(0.01);
+  transform-origin: bottom;
+  transition: opacity 200ms 100ms, transform 0.5s cubic-bezier(0.35, 0.04, 0.23, 0.98);
 }
 
 /*# sourceMappingURL=main.css.map */
