@@ -3,6 +3,7 @@ $color-secondaire:#c77fb3 ;
 $color-tertiaire:#99E2D0;
 $police-text:'roboto';
 $police-titre:"shrik";
+$color-degrade:linear-gradient(blue,pink);
 @font-face{
     font-family:"roboto";
     src: url(../../public/polices/Roboto-Regular.ttf)
@@ -16,3 +17,9 @@ $police-titre:"shrik";
     format("truetype");
     
 }
+@mixin media-query {
+   @content;
+        
+    }
+    
+
