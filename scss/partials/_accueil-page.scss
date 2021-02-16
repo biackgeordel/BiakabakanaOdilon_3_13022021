@@ -7,47 +7,72 @@ body{
        
    }
    header{
+    border-bottom:1px solid transparent;
+    box-shadow:1px -3vw 10vw  rgba(36, 31, 31,0.9);
+    margin-bottom:1vw;
        @include media-query{
         @media(max-width:950px){
-            border:1px solid grey;
             width:100%;
+            height:20vw;
             text-align: center;
-            padding-top:5vw;
-            height:15vw;
-            div>img{
-                width:40%;
-                height:20%;
+            display: flex;
+           
+            .logo{
+                width:70%;
+                height:100%;
+                text-align:left;
+                padding-left:4vw;
+                padding-top:4vw;
+               img{
+                   width:35vw;
+                   height:15vw;
+               }
+                
+                
             }
-
+        .lien{
+            width:30%;
+            height:100%;
+            font-size:5vw;
+            text-align:left;
+            padding-left:5vw;
+            padding-top:8vw;
+            a{
+                display: none;
+            }
+        }
+        
         }
 
        };
     
    }
  .research{
+     background-color: #eaeaea;
      @include media-query{
      @media(max-width:950px){
-     
      width: 100%;
-     height: 10vw;
+     height: 12vw;
      display: flex;
-     border:1px solid grey;
+     font-size:4vw;
      
      input{
-         width: 58%;
+         width: 60%;
          height:100%;
-         font-size:3.5vw;
+         font-size:4vw;
          border:none;
+         background:transparent;
+         border:none;
+         outline: none;
          
      }
      span{
          display: inline-block;
-         width:42%;
+         width:40%;
          height:100%;
-         font-size:3.5vw;
          padding-top:3vw;
-         padding-right:2vw;
-         background-color: white;
+         padding-right:3vw;
+         background:transparent;
          text-align: right;
           }
         }
@@ -55,27 +80,30 @@ body{
 
  }
    .section-research{
+    
      @include media-query{
      @media(max-width:950px){
        width:100%;
-       height:70vw;
+       height:100%;
       background: #f6f6f6;
        display: flex;
        flex-direction: column;
        align-items: center; 
       justify-content:space-between;
-       .fct{
+       &__titre{
+        margin-top:10vw;
         width:90%;
-        height: 12vw;
+        height: 15vw;
         text-align: center;
      
         }
     .description{
         width:90%;
-        height: 6vw;
+        margin-top:-3vw;
+        height:8vw;
         text-align: center;
         font-size:4vw;
-        margin-bottom:7vw;
+        margin-bottom:10vw;
     }
     
     .btn{
@@ -88,7 +116,7 @@ body{
         color:white;
         background: linear-gradient(360deg,$color-primaire 1%, $color-secondaire 100%);
         height:12vw;
-        margin-bottom:7vw;
+        margin-bottom:10vw;
     }
       }
        };
@@ -103,6 +131,7 @@ body{
        flex-direction: column;
        justify-content:space-evenly;
        align-items: center;
+       margin-bottom: 10vw;
        &__titre{
            width:90%;
            height:5vw;
