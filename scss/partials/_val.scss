@@ -21,5 +21,22 @@ $color-degrade:linear-gradient(blue,pink);
    @content;
         
     }
+    //function for colour light
+@function light($color){
+    @if(lightness($color)>50%){
+        $color:darken($color,8%);
+    }@else{
+        $color:lighten($color,25%);
+    }
+    @return $color;
+    
+}
+@mixin light($color){
+    background-color:light($color);
+    box-shadow:1vw 1vw 2vw  rgba(122, 120, 120,1);
+    transition: background-color .5s ease-in-out,box-shadow .5s ease-in-out;
+
+
+}
     
 
