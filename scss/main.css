@@ -21,6 +21,15 @@ h2, h3 {
   font-size: 6vw;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h3 {
+  font-family: "shrik";
+}
+
 @media (max-width: 950px) {
   body {
     margin: 0;
@@ -40,25 +49,25 @@ header {
     display: flex;
   }
   header .logo {
-    width: 70%;
+    width: 71%;
     height: 100%;
     text-align: left;
     padding-left: 4vw;
-    padding-top: 4vw;
+    padding-top: 2vw;
   }
-  header .logo img {
-    width: 40vw;
-    height: 15vw;
+  header .logo__titre {
+    font-size: 7vw;
+    font-family: "shrik";
   }
   header .lien {
-    width: 30%;
+    width: 29%;
     height: 100%;
     font-size: 5vw;
     text-align: left;
     padding-left: 5vw;
     padding-top: 8vw;
   }
-  header .lien a {
+  header .lien__icon {
     display: none;
   }
 }
@@ -122,7 +131,7 @@ header {
     border: none;
     width: 55vw;
     font-size: 3.5vw;
-    border-radius: 5vw;
+    border-radius: 6vw;
     font-weight: bold;
     color: white;
     background: linear-gradient(360deg, #9356DC 1%, #c77fb3 100%);
@@ -223,33 +232,72 @@ header {
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
 }
-
-p {
-  padding-left: 2vw;
-}
-p i {
-  float: right;
-  font-size: 8vw;
-  cursor: pointer;
-}
-p .hide {
-  color: black;
+.resto__menu .new-resto {
+  width: 25vw;
+  height: 8vw;
+  background-color: #99E2D0;
+  color: #1b6150;
+  text-align: center;
+  padding-top: 3vw;
+  font-weight: bold;
   position: relative;
-  right: 8vw;
+  top: -61vw;
+  right: -60vw;
+}
+
+.heart {
+  width: 10%;
+  display: block;
+  height: 20%;
+  width: 20%;
+  text-align: right;
   z-index: 1000;
+  float: right;
+  margin-top: -20vw;
+  margin-right: 6vw;
 }
-p .hide:hover {
-  color: #c77fb3;
+.heart--position {
+  margin-top: -12vw;
 }
-p .hide:hover + .test {
-  opacity: 1;
+.heart .test {
+  font-size: 6.3vw;
+  color: #9356DC;
+  transform-origin: bottom;
+  transform: scale(0);
+  z-index: -1;
+  transition: transform 0.8s ease-in-out;
+}
+.heart .hide {
+  font-size: 7vw;
+  z-index: 1;
+  position: relative;
+  left: 7.6vw;
+}
+.heart .hide:hover {
+  color: #9356DC;
+}
+.heart .hide:hover + .test {
   transform: scale(1);
 }
-p .hide + .test {
-  color: #c77fb3;
-  opacity: 1;
-  transform: scale(0);
-  transition: opacity 200ms 100ms, transform 0.5s cubic-bezier(0.35, 0.04, 0.23, 0.98);
+
+.text {
+  padding-left: 3vw;
+}
+
+.box-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #353535;
+  color: white;
+  font-size: 4vw;
+}
+.box-section > p {
+  padding-left: 2vw;
+}
+.box-section > p > a {
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

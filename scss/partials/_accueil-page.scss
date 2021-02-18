@@ -1,5 +1,5 @@
 body{
-    
+  
    @media  (max-width: 950px){
        margin:0;
     
@@ -18,27 +18,28 @@ body{
             display: flex;
            
             .logo{
-                width:70%;
+                width:71%;
                 height:100%;
                 text-align:left;
                 padding-left:4vw;
-                padding-top:4vw;
-               img{
-                   width:40vw;
-                   height:15vw;
+                padding-top:2vw;
+               &__titre{
+                   font-size:7vw;
+                   font-family:$police-titre;
                }
                 
                 
             }
         .lien{
-            width:30%;
+            width:29%;
             height:100%;
             font-size:5vw;
             text-align:left;
             padding-left:5vw;
             padding-top:8vw;
-            a{
-                display: none;
+            
+            &__icon{
+              display: none;
             }
         }
         
@@ -111,7 +112,7 @@ body{
         border:none;
         width:55vw;
         font-size:3.5vw;
-        border-radius:5vw;
+        border-radius:6vw;
         font-weight: bold;
         color:white;
         background: linear-gradient(360deg,$color-primaire 1%, $color-secondaire 100%);
@@ -221,48 +222,87 @@ body{
                 object-fit: cover;
                 border-top-left-radius:4vw;
                 border-top-right-radius:4vw;
+              
             }
               
         }
-      
-    }
-
+        .new-resto{
+            width:25vw;
+            height:8vw;
+            background-color:$color-tertiaire;
+            color:darken($color-tertiaire,50%);
+            text-align:center;
+            padding-top:3vw;
+            font-weight: bold;
+            position:relative;
+            top:-61vw;
+            right:-60vw;
         
- 
-}
-p{
-   padding-left:2vw;
-    & i{
-        float: right;
-       font-size:8vw;
-       cursor: pointer;
+        }
     }
-
-    $color-hide:black;
-.hide{
-    color:$color-hide;
-    position:relative;
-    right:8vw;
+}
+//icones en forme de coeur
+.heart{
+    width:10%;
+    display: block;
+    height:20%;
+    width:20%;
+    text-align: right;
     z-index:1000;
-    &:hover{
-        color:$color-secondaire;
+    float:right;
+    margin-top:-20vw;
+    margin-right:6vw;
+    &--position{
+        margin-top:-12vw;
+    }
+    .test{
+        font-size:6.3vw;
+        color:$color-primaire;
+        transform-origin:bottom;
+        transform: scale(0);
+        z-index:-1;
+        transition: transform 0.8s ease-in-out;
 
     }
-  
-    &:hover + .test{
-        opacity:1;
-            transform:scale(1);
+    .hide{
+        font-size:7vw;
+        z-index:1;
+        position: relative;
+        left:7.6vw;
+        &:hover{
+            color:$color-primaire;
+            +.test{
+                transform:scale(1);
+            }
+
+        }
         
     }
-    & + .test{
-        color:$color-secondaire ;
-        opacity:1;
-        transform:scale(0);
-        //transform-origin: bottom;
-        transition: opacity 200ms 100ms,transform .5s cubic-bezier(.35,.04,.23,.98);
-       
-      
+
+}
+//text contenant le nom des restaurant et les villes
+.text{
+    padding-left:3vw;
+}
+
+.box-section{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    background:$colorbg-footer;
+    color:white;
+    font-size:4vw;
+    >p{
+        padding-left:2vw;
+        >a{
+            color:white;
+        }
     }
 
 }
-}
+        
+  
+
+
+    
