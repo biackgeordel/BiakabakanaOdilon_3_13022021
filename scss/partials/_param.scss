@@ -7,9 +7,16 @@ body,html{
 }
 *{
     box-sizing: border-box;
+    @media (max-width:950px){
+        font-family:5vw;
+    }
+    
 }
 h2,h3{
-    font-size:5vw;
+    @media (max-width:950px) {
+        font-size:6vw;  
+    }
+   
 }
 a{
 text-decoration: none;

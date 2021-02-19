@@ -1,10 +1,10 @@
 @font-face {
   font-family: "roboto";
-  src: url(../../public/polices/Roboto-Regular.ttf) format("truetype");
+  src: url("../../public/police_site/Roboto-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "shrik";
-  src: url("../../public/polices/Shrikhand-Regular.ttf") format("truetype");
+  src: url("../../public/police_site/Shrikhand-Regular.ttf") format("truetype");
 }
 body, html {
   width: 100%;
@@ -15,9 +15,16 @@ body, html {
 * {
   box-sizing: border-box;
 }
+@media (max-width: 950px) {
+  * {
+    font-family: 5vw;
+  }
+}
 
-h2, h3 {
-  font-size: 5vw;
+@media (max-width: 950px) {
+  h2, h3 {
+    font-size: 6vw;
+  }
 }
 
 a {
@@ -86,7 +93,7 @@ header {
     border: none;
     outline: none;
   }
-  .research span {
+  .research > span {
     display: inline-block;
     width: 40%;
     height: 100%;
