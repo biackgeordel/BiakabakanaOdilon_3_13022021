@@ -2,22 +2,9 @@ $color-primaire:#9356DC;
 $color-secondaire:#c77fb3 ;
 $color-tertiaire:#99E2D0;
 $police-text:'roboto';
-$police-titre:"shrik";
 $color-degrade:linear-gradient(blue,pink);
 $colorbg-footer:#353535;
-@font-face{
-    font-family:"roboto";
-    src: url("../../public/police_site/Roboto-Regular.ttf")
-    format("truetype");
-   
-   
-}
-@font-face{
-    font-family:"shrik";
-    src: url("../../public/police_site/Shrikhand-Regular.ttf")
-    format("truetype");
-    
-}
+
 @mixin media-query {
    @content;
         
