@@ -21,7 +21,11 @@ $colorbg-footer:#353535;
 }
 @mixin light($color){
     background-color:light($color);
-    box-shadow:1vw 1vw 2vw  rgba(122, 120, 120,1);
+    box-shadow:1px .5vw .5vw rgba(122, 120, 120,1);
+    @media(max-width:950px){
+        box-shadow:1vw 1vw 2vw  rgba(122, 120, 120,1);
+    }
+    
     transition: background-color .5s ease-in-out,box-shadow .5s ease-in-out;
 
 
