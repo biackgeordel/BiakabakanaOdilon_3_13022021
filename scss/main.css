@@ -295,7 +295,7 @@ body {
 .box-fct .box-fct__contain .text {
   display: block;
   float: left;
-  margin-left: -2vw;
+  margin-left: 1vw;
 }
 @media (max-width: 950px) {
   .box-fct .box-fct__contain .text {
@@ -339,14 +339,13 @@ body {
   width: 18vw;
   height: 15vw;
   background: white;
-  border-radius: 2vw;
+  border-radius: 1vw;
 }
 @media (max-width: 950px) {
   .resto__menu {
     border-radius: 4vw;
     margin-bottom: 3vw;
     height: 70vw;
-    margin-bottom: 3vw;
     width: 90%;
   }
 }
@@ -358,8 +357,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-top-left-radius: 2vw;
-  border-top-right-radius: 2vw;
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
 }
 @media (max-width: 950px) {
   .resto__menu__image > img {
@@ -398,11 +397,22 @@ body {
   text-align: right;
   z-index: 1000;
   float: right;
-  margin-top: -20vw;
-  margin-right: 6vw;
+  margin-top: -5vw;
+  margin-right: 1vw;
+}
+@media (max-width: 950px) {
+  .heart {
+    margin-top: -20vw;
+    margin-right: 6vw;
+  }
 }
 .heart--position {
-  margin-top: -12vw;
+  margin-top: -3vw;
+}
+@media (max-width: 950px) {
+  .heart--position {
+    margin-top: -12vw;
+  }
 }
 .heart .test {
   font-size: 2vw;
@@ -420,11 +430,16 @@ body {
   font-size: 2vw;
   z-index: 1;
   position: relative;
-  left: 9vw;
+  left: 2.2vw;
 }
 @media (max-width: 950px) {
   .heart .hide {
     font-size: 8vw;
+  }
+}
+@media (max-width: 950px) {
+  .heart .hide {
+    left: 9vw;
   }
 }
 .heart .hide:hover {
@@ -435,40 +450,73 @@ body {
   transform: scale(1);
 }
 
-.text {
-  padding-left: 3vw;
+.resto__menu a > .text {
+  padding-left: 0.5vw;
+}
+@media (max-width: 950px) {
+  .resto__menu a > .text {
+    padding-left: 3vw;
+  }
 }
 
 .box-section {
   width: 100%;
-  height: 50vw;
+  height: 15vw;
   background: #353535;
   color: white;
+}
+@media (max-width: 950px) {
+  .box-section {
+    height: 50vw;
+  }
 }
 .box-section > h3 {
   font-family: "shrikhand", sans-serif;
   width: 90%;
   margin: auto;
+  font-size: 2vw;
   position: relative;
-  top: 5vw;
+  top: 2vw;
+}
+@media (max-width: 950px) {
+  .box-section > h3 {
+    top: 5vw;
+    font-size: 6vw;
+  }
 }
 .box-section > div {
   width: 90%;
   margin: auto;
   position: relative;
-  top: 12vw;
+  top: 3vw;
+}
+@media (max-width: 950px) {
+  .box-section > div {
+    top: 12vw;
+  }
 }
 .box-section > div > p {
   margin-top: -2vw;
-  font-size: 4vw;
+  font-size: 2vw;
+}
+@media (max-width: 950px) {
+  .box-section > div > p {
+    font-size: 4vw;
+  }
 }
 .box-section > div > p > a {
   color: white;
 }
 .box-section > div > p > span {
   display: inline-block;
-  width: 4vw;
-  padding-right: 7vw;
+  width: 2vw;
+  padding-right: 1vw;
+}
+@media (max-width: 950px) {
+  .box-section > div > p > span {
+    width: 4vw;
+    padding-right: 7vw;
+  }
 }
 
 .box {
