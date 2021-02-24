@@ -5,6 +5,7 @@
         width:100%;
         height:50%;
     }
+  
 }
 .box-resto{
     width:100%;
@@ -12,6 +13,120 @@
     border-top-right-radius:10vw;
     border-top-left-radius:10vw;
     background-color: white;
+   background:rgb(231, 228, 228);
     position: relative;
     top:-15vw;
+    margin-bottom:-15vw;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    &__titre{
+        width:100%;
+        font-family:'Shrikhand',sans-serif;
+        font-size:7vw;
+        padding-left:5vw;
+        >span{
+            float:right;
+            padding-right:10vw;
+            >i{
+                font-size:6vw;
+                padding-top:2.5vw;
+            }
+        }
+    }
 }
+.box-resto__entree{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+   align-items: center;  
+   }
+
+.ma-map{
+    margin-bottom:3vw;
+    .titre-entree{
+        width:100%;
+        > h3{
+            border-bottom:1vw solid #15DEA5;
+            text-transform: uppercase;
+            height:10%;
+            width:10%;
+            font-size:4vw;
+        }
+    }
+
+
+
+}
+
+   .plat{
+       background: white;
+       width:90vw;
+       height:15vw;
+       border-radius:3vw;
+       margin-bottom:3vw;
+     overflow: hidden;
+      display: flex;
+      z-index:1000;
+      &:hover{
+        & .titre{
+            width:60vw;
+            
+        }
+        .extension{
+            span:nth-child(2)>i{
+                transform:rotate(360deg);
+            }
+
+      }
+    }
+     
+      
+       .titre{
+           width:90vw;
+            white-space:nowrap;
+            overflow: hidden;
+            padding-top:1vw;
+            padding-left:2vw;
+            text-overflow: ellipsis;
+            transition:width .6s ease-in-out;    
+            }
+           
+
+          
+        }
+       
+       
+       .extension{
+           width:15vw;
+           text-align: right;
+          white-space: nowrap;
+         
+          span{
+            display:inline-block;
+            padding-top: 5.3vw;
+            width:15vw;
+            text-align: center;
+            height:15vw;
+        }
+          span:nth-child(2){
+               color:white;
+               background: #15DEA5;
+               border-top-right-radius: 3vw;
+               border-bottom-right-radius: 3vw;
+               width:15vw;
+               //font-size:2vw;
+               i{
+                   transform:rotate(0deg);
+                   transition:transform 0.8s ease-in-out .05s;
+               }
+              
+           }
+          
+          
+       }
+    .box-resto__plat,.box-resto__dessert{
+        @extend .box-resto__entree;
+    }

@@ -163,30 +163,39 @@ body{
         }
     }
     
-    .btn{
-        outline: none;
-        border:none;
-        width:15vw;
-        height:4vw;
-        border-radius:3rem;
-        font-size:1vw;
-        font-weight:bold;
-        color:white;
-        cursor: pointer;
-        margin-bottom:2%;
-        background: linear-gradient(360deg,$color-primaire 1%, $color-secondaire 100%);
-        
-        @media(max-width:950px){
-            width:55vw;
-            font-size:3.5vw;
-            height:12vw;
-             margin-bottom:10vw;
-             border-radius:6vw;
-        }
-      
-    }
-
    }
+
+   .btn{
+    outline: none;
+    border:none;
+    width:15vw;
+    height:4vw;
+    border-radius:3rem;
+    font-size:1vw;
+    font-weight:bold;
+    color:white;
+    cursor: pointer;
+    margin-bottom:2%;
+    background: linear-gradient(360deg,$color-primaire 1%, $color-secondaire 100%);
+    
+    @media(max-width:950px){
+        width:55vw;
+        font-size:3.5vw;
+        height:12vw;
+         margin-bottom:10vw;
+         border-radius:6vw;
+         &--margin{
+             margin-top:10vw;
+             margin-bottom:20vw;
+         }
+    }
+  
+}
+
+
+
+
+
    
    .box-fct{
        width:100%;
@@ -441,7 +450,7 @@ body{
 .box-section{
     width:100%;
     
-    height:15vw;
+   height:15vw;
     @media(max-width:950px){
         height:50vw;  
     }
