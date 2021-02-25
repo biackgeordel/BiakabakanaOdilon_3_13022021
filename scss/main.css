@@ -29,6 +29,10 @@ a {
   color: black;
 }
 
+strong {
+  font-weight: bold;
+}
+
 body {
   width: 80%;
   height: 100%;
@@ -532,11 +536,12 @@ body {
 
 .box {
   width: 100%;
-  height: 50%;
+  height: 70vw;
 }
 .box__image {
   width: 100%;
-  height: 50%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .box-resto {
@@ -594,7 +599,8 @@ body {
 .plat {
   background: white;
   width: 90vw;
-  height: 15vw;
+  height: 16vw;
+  line-height: 1.5;
   border-radius: 3vw;
   margin-bottom: 3vw;
   overflow: hidden;
@@ -624,10 +630,9 @@ body {
 }
 .extension span {
   display: inline-block;
-  padding-top: 5.3vw;
   width: 15vw;
   text-align: center;
-  height: 15vw;
+  height: 16vw;
 }
 .extension span:nth-child(2) {
   color: white;
@@ -635,10 +640,16 @@ body {
   border-top-right-radius: 3vw;
   border-bottom-right-radius: 3vw;
   width: 15vw;
+  padding-top: 5.3vw;
 }
 .extension span:nth-child(2) i {
   transform: rotate(0deg);
   transition: transform 0.8s ease-in-out 0.05s;
+}
+.extension span:nth-child(1) > strong {
+  position: relative;
+  top: 1.5vw;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=main.css.map */
