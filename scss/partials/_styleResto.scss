@@ -145,3 +145,76 @@
     .box-resto__plat,.box-resto__dessert{
         @extend .box-resto__entree;
     }
+    @keyframes apparition-progressive{
+        from{
+            transform:translateY(-10px);
+            opacity:0;
+        }
+        to{
+            transform: translateY(0px);
+            opacity:1;
+        }
+    }
+    
+   $map-entree:(
+    "titre_entree":0s,
+    "entree-1":0.5s,
+    "entree-2":0.7s,
+    "entree-3":1s,
+     "entree-4":1.2s
+   );
+   $map-plat:(
+    "titre_plat":1.6s,
+    "plat-1":1.8s,
+    "plat-2":2s,
+    "plat-3":2.2s,
+     "plat-4":2.5s
+   );
+   $map-dessert:(
+    "titre_dessert":2.8s,
+    "dessert-1":3s,
+    "dessert-2":3.4s,
+    "dessert-3":3.6s,
+     "dessert-4":4s
+   );
+   
+   @each $key1,$var1 in $map-plat {
+    .#{$key1}{
+         animation-name:apparition-progressive;
+         animation-duration:1s;
+         animation-iteration-count:1;
+         animation-delay:$var1;
+         animation-fill-mode: backwards;
+         animation-timing-function: ease-in-out;
+     }
+}
+   
+@each $key1,$var1 in $map-dessert {
+    .#{$key1}{
+         animation-name:apparition-progressive;
+         animation-duration:1s;
+         animation-iteration-count:1;
+         animation-delay:$var1;
+         animation-fill-mode: backwards;
+         animation-timing-function: ease-in-out;
+     }
+}
+
+
+ 
+        @each $key1,$var1 in $map-entree {
+           .#{$key1}{
+                animation-name:apparition-progressive;
+                animation-duration:1s;
+                animation-iteration-count:1;
+                animation-delay:$var1;
+                animation-fill-mode: backwards;
+                animation-timing-function: ease-in-out;
+            }
+    }
+   
+        
+ 
+
+
+  

@@ -426,7 +426,7 @@ body{
         
         &:hover{
             color:$color-primaire;
-            transition: 0.2 ease-in-out;
+            transition: all 0.2 ease-in-out;
             +.test{
                 transform:scale(1);
             }
