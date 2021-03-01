@@ -121,8 +121,6 @@
                border-bottom-right-radius: 3vw;
                width:15vw;
                padding-top: 5.3vw;
-               
-               //font-size:2vw;
                i{
                    transform:rotate(0deg);
                    transition:transform 0.8s ease-in-out .05s;
@@ -158,24 +156,24 @@
     
    $map-entree:(
     "titre_entree":0s,
-    "entree-1":0.5s,
-    "entree-2":0.7s,
-    "entree-3":1s,
-     "entree-4":1.2s
+    "entree-1":0.4s,
+    "entree-2":0.8s,
+    "entree-3":1.2s,
+     "entree-4":1.6s
    );
    $map-plat:(
-    "titre_plat":1.6s,
-    "plat-1":1.8s,
-    "plat-2":2s,
-    "plat-3":2.2s,
-     "plat-4":2.5s
+    "titre_plat":2s,
+    "plat-1":2.4s,
+    "plat-2":2.8s,
+    "plat-3":3.2s,
+     "plat-4":3.6s
    );
    $map-dessert:(
-    "titre_dessert":2.8s,
-    "dessert-1":3s,
-    "dessert-2":3.4s,
-    "dessert-3":3.6s,
-     "dessert-4":4s
+    "titre_dessert":4s,
+    "dessert-1":4.4s,
+    "dessert-2":4.8s,
+    "dessert-3":5.2s,
+     "dessert-4":5.6s
    );
    
    @each $key1,$var1 in $map-plat {
