@@ -459,7 +459,7 @@ body {
 }
 .heart .hide:hover {
   color: #9356DC;
-  transition: all 0.2 ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .heart .hide:hover + .test {
   transform: scale(1);
@@ -534,6 +534,76 @@ body {
   }
 }
 
+.box-loading {
+  opacity: 0;
+  width: 80%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -1000;
+  display: flex;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+@media (max-width: 950px) {
+  .box-loading {
+    width: 100%;
+    height: 100%;
+  }
+}
+.box-loading {
+  animation-name: ani-box-loading;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+.box-loading .loading {
+  border-top: 1px solid red;
+  border-left: 1px solid #99E2D0;
+  border-right: 1px solid yellow;
+  border-bottom: 1px solid #9356DC;
+  width: 40vw;
+  margin-left: 20%;
+  height: 40vw;
+  border-width: 3vw;
+  border-radius: 100%;
+  animation-name: loading;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+}
+@media (max-width: 950px) {
+  .box-loading .loading {
+    margin-left: 25%;
+  }
+}
+.box-loading .text-ani {
+  position: relative;
+  font-family: "shrikhand", cursive;
+  font-size: 4vw;
+  text-shadow: 0px 1px 2px black;
+  right: 30vw;
+}
+@keyframes loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ani-box-loading {
+  0% {
+    opacity: 1;
+    z-index: 1000;
+  }
+  100% {
+    z-index: 1000;
+    filter: blur(10px);
+    transform: scale(0);
+  }
+}
 .box {
   width: 100%;
   height: 70vw;
