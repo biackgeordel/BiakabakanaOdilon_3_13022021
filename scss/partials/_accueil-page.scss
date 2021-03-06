@@ -426,7 +426,7 @@ body{
         
         &:hover{
             color:$color-primaire;
-            transition: 0.2 ease-in-out;
+            transition:color 0.2s ease-in-out;
             +.test{
                 transform:scale(1);
             }
@@ -500,6 +500,85 @@ body{
         }
     }
 
+
+}
+.box-loading{
+   opacity:0;
+   @media (max-width:950px){
+    width:100%;
+    height:100%;
+   }
+   width:80%;
+   height:100%;
+    position:fixed;
+    top:0;
+    z-index:-1000;
+    display: flex;
+    background:white;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+   
+    &{
+    animation-name: ani-box-loading; 
+    animation-duration:3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+ 
+    }
+    .loading{
+        border-top:1px solid red;
+        border-left:1px solid $color-tertiaire;
+        border-right:1px solid yellow;
+        border-bottom:1px solid $color-primaire;
+        width:40vw;
+        margin-left:20%;
+        @media(max-width:950px){
+            margin-left:25%;  
+        }
+        height:40vw;
+        border-width:3vw;
+        border-radius:100%;
+        animation-name:loading; 
+        animation-duration:.5s;
+        animation-iteration-count:infinite;
+        animation-timing-function:linear;
+        animation-fill-mode: backwards;
+
+    }
+    .text-ani{
+        position:relative;
+        font-family:"shrikhand",cursive;
+        font-size:4vw;
+        text-shadow:0px 1px  5px black;
+        right:30vw;
+    }
+
+@keyframes loading {
+        100%{
+          transform:rotate(360deg); 
+         
+        }
+        
+      
+    
+    }  
+    
+
+
+
+}
+@keyframes ani-box-loading{
+    0%{
+      
+        opacity:1;
+        z-index:1000;
+    }
+    100%{
+        z-index:1000;
+        filter:blur(10px) ;
+        transform: scale(0);
+    }
 
 }
         
