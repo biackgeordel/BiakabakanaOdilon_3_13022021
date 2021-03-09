@@ -4,7 +4,8 @@
   "description": "projet 3 ",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./scss/main.scss:./scss/main.css"
+    "sass": "sass --watch ./scss/main.scss:./scss/main.css --style compressed",
+    "prefix":"postcss ./scss/main.css --use autoprefixer -d ./scss/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "Biakabakana odilon",
   "license": "ISC",
+  "browserslist":"last 4 versions",
   "bugs": {
     "url": "https://github.com/biackgeordel/BiakabakanaOdilon_3_13022021/issues"
   },

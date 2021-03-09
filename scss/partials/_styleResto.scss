@@ -1,6 +1,14 @@
+
+
+
+//div contenant la photo du restaurant
 .box{
+    @media(max-width:950px){
+        height:70vw;
+    }
     width:100%;
-    height:70vw;
+    height:35vw;
+  
     &__image{
         width:100%;
         height:100%;
@@ -8,13 +16,15 @@
     }
   
 }
+//contenant principal
 .box-resto{
+  
     width:100%;
     height:100%;
     border-top-right-radius:10vw;
     border-top-left-radius:10vw;
     background-color: white;
-   background:#f6f6f6;//rgb(231, 228, 228);
+   background:#f6f6f6;
     position: relative;
     top:-15vw;
     margin-bottom:-15vw;
@@ -25,20 +35,28 @@
     &__titre{
         width:100%;
         font-family:'Shrikhand',sans-serif;
-        font-size:7vw;
+        @media(max-width:950px){
+            font-size:7vw;
+        }
+        font-size:4vw;
         padding-left:5vw;
         >span{
             float:right;
             padding-right:10vw;
             >i{
-                font-size:6vw;
-                padding-top:2.5vw;
+                font-size:4vw;
+                padding-top:1.5vw;
+                @media(max-width:950px){
+                    font-size:6vw;
+                    padding-top:2.5vw;
+                }
+                
             }
         }
     }
 }
 .box-resto__entree{
-    width:100%;
+        width:100%;
     height:100%;
     display: flex;
     flex-direction: column;
@@ -46,15 +64,23 @@
    }
 
 .ma-map{
+  
     margin-bottom:3vw;
     .titre-entree{
-        width:100%;
+        @media(max-width:950px){
+            width:100%;
+        }
+        //titre des plats dans le menu
         > h3{
             border-bottom:1vw solid #15DEA5;
             text-transform: uppercase;
             height:10%;
             width:10%;
-            font-size:4vw;
+            @media(max-width:950px){
+                font-size:4vw;
+            }
+            font-size:3vw;
+            
         }
     }
 
@@ -63,9 +89,14 @@
 }
 
    .plat{
+   
        background: white;
-       width:90vw;
-       height:16vw;
+       width:60vw;
+       @media(max-width:950px){
+        width:90vw;
+        height:16vw;
+       }
+       height:10vw;
        line-height:1.5;
        border-radius:3vw;
        margin-bottom:3vw;
@@ -74,7 +105,10 @@
       z-index:1000;
       &:hover{
         & .titre{
-            width:60vw;
+            width:40vw;
+            @media(max-width:950px){
+                width:60vw;
+            }
             
         }
         .extension{
@@ -87,7 +121,10 @@
      
       
        .titre{
-           width:90vw;
+            width:60vw;
+           @media(max-width:950px){
+            width:90vw;
+           }
             white-space:nowrap;
             overflow: hidden;
             padding-top:1vw;
@@ -100,18 +137,25 @@
           
         }
        
-       
        .extension{
-           width:15vw;
+            width:10vw;
+           @media(max-width:950px){
+            width:15vw;
+           }
+          
            text-align: right;
           white-space: nowrap;
          
           span{
             display:inline-block;
-            
-            width:15vw;
+            width:10vw;
+            @media(max-width:950px){
+             width:15vw;
+             height:16vw;
+            }
+            height:10vw;
             text-align: center;
-            height:16vw;
+           
             
         }
           span:nth-child(2){
@@ -119,8 +163,12 @@
                background: #15DEA5;
                border-top-right-radius: 3vw;
                border-bottom-right-radius: 3vw;
-               width:15vw;
-               padding-top: 5.3vw;
+                width:10vw;
+               @media(max-width:950px){
+                width:15vw;
+                padding-top: 5.3vw;
+               }
+               padding-top:4vw;
                i{
                    transform:rotate(0deg);
                    transition:transform 0.8s ease-in-out .05s;
@@ -130,9 +178,14 @@
            }
            span:nth-child(1){
             >strong{
-                position: relative;
-                top:1.5vw;
                 display:inline-block;
+                position: relative;
+                top:.5vw;
+                @media(max-width:950px){
+                    top:1.5vw;
+                }
+               
+                
                 
             }
            
@@ -210,8 +263,37 @@
                 animation-timing-function: ease-in-out;
             }
     }
+    //changement de taille de police pour le desktop
+    .plat{
+        >div{
+            font-size:2vw;
+            @media(max-width:950px){
+                font-size:4vw;
+            }
+            >strong{
+                font-size:2vw;
+                @media(max-width:950px){
+                    font-size:4vw;
+                }
+            }
+        }
+        >.extension{
+            >span>i{
+                font-size: 2vw;
+                @media(max-width:950px){
+                    font-size:4vw;
+                }
+            }
+            >span>strong{
+                font-size: 2vw;
+                @media(max-width:950px){
+                    font-size:4vw;
+                }
+            }
+        }
+    }
    
-        
+    
  
 
 

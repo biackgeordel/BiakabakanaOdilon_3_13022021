@@ -164,8 +164,9 @@ body{
     }
     
    }
-
+    //le style de bouton 
    .btn{
+       $color-btn:linear-gradient(360deg,$color-primaire 1%, $color-secondaire 100%);
     outline: none;
     border:none;
     width:15vw;
@@ -175,20 +176,25 @@ body{
     font-weight:bold;
     color:white;
     cursor: pointer;
-    margin-bottom:2%;
-    background: linear-gradient(360deg,$color-primaire 1%, $color-secondaire 100%);
+    margin-bottom:5%;
+    @media(max-width:950px){
+        margin-bottom:2%;  
+    }
+    background: $color-btn;
     
     @media(max-width:950px){
         width:55vw;
         font-size:3.5vw;
         height:12vw;
          margin-bottom:10vw;
+        
          border-radius:6vw;
          &--margin{
              margin-top:10vw;
-             margin-bottom:20vw;
+             margin-bottom:15vw;
          }
     }
+ 
   
 }
 
@@ -196,7 +202,7 @@ body{
 
 
 
-   
+   //div contenant le bouton de fonctionnement
    .box-fct{
        width:100%;
        height:5vw;
@@ -304,7 +310,6 @@ body{
     flex-wrap:wrap;
     line-height:0.5;
     background:rgb(231, 228, 228);
-    border:1px solid rgb(231, 228, 228);
     @media(max-width:950px){
         flex-direction: column;
         justify-content: center;
@@ -317,11 +322,14 @@ body{
     &__titre{
         width:100%;
         height:3vw;
+        padding-left:2vw;
        text-align: left;
-      // font-size:2vw;
+      font-size:2vw;
        @media(max-width:950px){
         width:90%;
         height: 6vw;
+        font-size:6vw;
+        padding-left:0;
        }
 
     }
@@ -395,12 +403,14 @@ body{
     margin-top:-20vw;
     margin-right:6vw;
     }
+    //position des coeurs dans le media query
     &--position{
        margin-top:-3vw;
         @media(max-width:950px){
             margin-top:-12vw;
         }
     }
+    //icône de coeur visible
     .test{
         font-size:2vw; 
         @media(max-width:950px){
@@ -412,6 +422,7 @@ body{
         transition: transform 0.5s ease-in-out;
 
     }
+    //icône de coeur cachée
     .hide{
         font-size:2vw;
         @media(max-width:950px){
@@ -512,6 +523,9 @@ body{
    height:100%;
     position:fixed;
     top:0;
+    right:0;
+    bottom:0;
+    left:0;
     z-index:-1000;
     display: flex;
     background:white;
@@ -527,37 +541,36 @@ body{
  
     }
     .loading{
-        border-top:1px solid red;
-        border-left:1px solid $color-tertiaire;
-        border-right:1px solid yellow;
-        border-bottom:1px solid $color-primaire;
+       border-top:2vw solid red;
+        border-left:2vw solid $color-tertiaire;
+        border-right:2vw solid yellow;
+        border-bottom:2vw solid $color-primaire;
         width:40vw;
         margin-left:20%;
         @media(max-width:950px){
             margin-left:25%;  
         }
         height:40vw;
-        border-width:3vw;
+       
         border-radius:100%;
         animation-name:loading; 
         animation-duration:.5s;
         animation-iteration-count:infinite;
         animation-timing-function:linear;
-        animation-fill-mode: backwards;
+        animation-fill-mode: forwards;
 
     }
     .text-ani{
         position:relative;
         font-family:"shrikhand",cursive;
         font-size:4vw;
-        text-shadow:0px 1px  2px black;
         right:30vw;
     }
 
-@keyframes loading {
+@keyframes loading{
+     
         100%{
-          transform:rotate(360deg); 
-         
+            transform: rotate(360deg);    
         }
         
       
